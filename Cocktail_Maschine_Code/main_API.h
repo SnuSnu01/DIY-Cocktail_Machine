@@ -15,62 +15,62 @@ void pinInit() {
 
 
 // Methods for specific beverages
-void LongIsland (){
+void LongIsland(){
   
 }
 
-void SexOnTheBeach (){
+void SexOnTheBeach(){
   
 }
 
-void CubaLibre (){
+void CubaLibre(){
   
 }
 
-void CranberryVodka (){
+void CranberryVodka(){
   
 }
 
-void Screwdriver (){
+void Screwdriver(){
   
 }
 
-void BlueLady (){
+void BlueLady(){
   
 }
 
-void BlackThunder (){
+void BlackThunder(){
   
 }
 
-void KickItIn (){
+void KickItIn(){
   
 }
 
-void (AquaVelva){
+void AquaVelva(){
   
 }
 
-void (SapphireMadras){
+void SapphireMadras(){
   
 }
 
-void (GreenWidow){
+void GreenWidow(){
   
 }
 
-void (GreenEyes){
+void GreenEyes(){
   
 }
 
-void (GreenDevil){
+void GreenDevil(){
   
 }
 
-void (GinJuice){
+void GinJuice(){
   
 }
 
-void (SoftPoison){
+void SoftPoison(){
   
 }
