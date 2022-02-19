@@ -54,7 +54,7 @@ void display_run() {
 //* here are the events when a button is pressed *
 //************************************************
 void m_longislandPushCallback(void *ptr) {
-  LongIsland();
+    
   sendCommand("ausw_seite_1");
 }
 
