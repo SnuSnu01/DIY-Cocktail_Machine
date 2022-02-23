@@ -34,12 +34,30 @@ NexButton m_greendevil   =  NexButton(   16,          2,      "m_greendevil"    
 NexButton m_ginjuice     =  NexButton(   17,          2,      "m_ginjuice"      );
 NexButton m_softpoison   =  NexButton(   18,          2,      "m_softpoison"    );
 
-
+NexPage page0 = NexPage(0, 0, "startscreen");
+NexPage page1 = NexPage(1, 0, "ausw_seite_1");
+NexPage page2 = NexPage(2, 0, "ausw_seite_2");
+NexPage page3 = NexPage(3, 0, "ausw_seite_3");
+NexPage page19 = NexPage(19, 0, "ladescreen");
 
 // Declaring the objects of the listener
 // Declare only those who report something back
 NexTouch *nex_listen_list[] = {
   &m_longisland,
+  &m_sotb,
+  &m_cubalibre,
+  &m_cranberry,
+  &m_screwdriver,
+  &m_bluelady,
+  &m_blackthunder,
+  &m_kickitin,
+  &m_aquavelva,
+  &m_sapphire,
+  &m_greenwidow,
+  &m_greeneyes,
+  &m_greendevil,
+  &m_ginjuice,
+  &m_softpoison,
   NULL
 };
 
@@ -53,12 +71,125 @@ void display_run() {
 //************************************************
 //* here are the events when a button is pressed *
 //************************************************
-void m_longislandPushCallback(void *ptr) {
-    
-  sendCommand("ausw_seite_1");
+void m_longislandPopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  LongIsland();
+  delay(500);
+  page1.show();
 }
 
+void m_sotbPopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  SexOnTheBeach();
+  delay(500);
+  page1.show(); 
+}
 
+void m_cubalibrePopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  CubaLibre();
+  delay(500);
+  page1.show();  
+}
+
+void m_cranberryPopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  CranberryVodka();
+  delay(500);
+  page1.show();  
+}
+
+void m_screwdriverPopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  Screwdriver();
+  delay(500);
+  page1.show();  
+}
+
+void m_blueladyPopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  BlueLady();
+  delay(500);
+  page1.show(); 
+}
+
+void m_blackthunderPopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  BlackThunder();
+  delay(500);
+  page2.show();
+}
+
+void m_kickitinPopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  KickItIn();
+  delay(500);
+  page2.show(); 
+}
+
+void m_aquavelvaPopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  AquaVelva();
+  delay(500);
+  page2.show();
+}
+
+void m_sapphirePopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  SapphireMadras();
+  delay(500);
+  page2.show();
+}
+
+void m_greenwidowPopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  GreenWidow();
+  delay(500);
+  page2.show();  
+}
+
+void m_greeneyesPopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  GreenEyes();
+  delay(500);
+  page2.show();  
+}
+
+void m_greendevilPopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  GreenDevil();
+  delay(500);
+  page3.show();
+}
+
+void m_ginjuicePopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  GinJuice();
+  delay(500);
+  page3.show();
+}
+
+void m_softpoisonPopCallback(void *ptr) {
+  page19.show();
+  delay(500);
+  SoftPoison();
+  delay(500);
+  page3.show(); 
+}
 
 //************************************************
 //* Here the display is initialized              *
@@ -66,6 +197,21 @@ void m_longislandPushCallback(void *ptr) {
 void displayInit() {
   nexInit();
 
-  m_longisland.attachPush(m_longislandPushCallback);
+  m_longisland.attachPop(m_longislandPopCallback);
+  m_sotb.attachPop(m_sotbPopCallback);
+  m_cubalibre.attachPop(m_cubalibrePopCallback);
+  m_cranberry.attachPop(m_cranberryPopCallback);
+  m_screwdriver.attachPop(m_screwdriverPopCallback);
+  m_bluelady.attachPop(m_blueladyPopCallback);
+  m_blackthunder.attachPop(m_blackthunderPopCallback);
+  m_kickitin.attachPop(m_kickitinPopCallback);
+  m_aquavelva.attachPop(m_aquavelvaPopCallback);
+  m_sapphire.attachPop(m_sapphirePopCallback);
+  m_greenwidow.attachPop(m_greenwidowPopCallback);
+  m_greeneyes.attachPop(m_greeneyesPopCallback);
+  m_greendevil.attachPop(m_greendevilPopCallback);
+  m_ginjuice.attachPop(m_ginjuicePopCallback);
+  m_softpoison.attachPop(m_softpoisonPopCallback);
+  
   Serial.println("The Nextion-Display is ready...");
 }
