@@ -108,7 +108,7 @@ void LongIsland() {
   digitalWrite(15, LOW); //Vodka aus
   mlCalculator(10);
   digitalWrite(21, LOW); //Orange aus
-  mlCalculator(200);
+  mlCalculator(150);
   digitalWrite(19, LOW); //Cola aus 
   Serial.println("Erfolgreich eingefüllt!");
 }
@@ -130,9 +130,9 @@ void SexOnTheBeach() {
 void CubaLibre() {
   digitalWrite(19, HIGH);
   digitalWrite(17, HIGH);
-  mlCalculator(60);
+  mlCalculator(50);
   digitalWrite(17, LOW);
-  mlCalculator(180);
+  mlCalculator(150);
   digitalWrite(19, LOW);
   Serial.println("Erfolgreich eingefüllt!");
 }
@@ -254,7 +254,7 @@ void GinJuice() {
   digitalWrite(21, HIGH);
   mlCalculator(50);
   digitalWrite(16, LOW);
-  mlCalculator(200);
+  mlCalculator(150);
   digitalWrite(21, LOW);
   Serial.println("Erfolgreich eingefüllt!");
 }
