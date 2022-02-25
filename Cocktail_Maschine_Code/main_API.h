@@ -96,19 +96,19 @@ void mlCalculator(int ml) {
 }
 
 void LongIsland() {
-  digitalWrite(16, HIGH); //Gin an
-  digitalWrite(17, HIGH); //Rum an
-  digitalWrite(19, HIGH); //Cola an
+  digitalWrite(16, HIGH); //Gin an 20ml
+  digitalWrite(17, HIGH); //Rum an 20ml
+  digitalWrite(19, HIGH); //Cola an 160ml
   mlCalculator(20);
-  digitalWrite(16, LOW); //Gin aus
-  digitalWrite(17, LOW); //Rum aus
-  digitalWrite(21, HIGH); //Orange an
-  digitalWrite(15, HIGH); //Vodka an
+  digitalWrite(16, LOW); //Gin aus 
+  digitalWrite(17, LOW); //Rum aus 
+  digitalWrite(21, HIGH); //Orange an 30ml
+  digitalWrite(15, HIGH); //Vodka an 20ml
   mlCalculator(20);
-  digitalWrite(15, LOW); //Vodka aus
+  digitalWrite(15, LOW); //Vodka aus 
   mlCalculator(10);
   digitalWrite(21, LOW); //Orange aus
-  mlCalculator(150);
+  mlCalculator(110);
   digitalWrite(19, LOW); //Cola aus 
   Serial.println("Erfolgreich eingefüllt!");
 }
@@ -128,42 +128,42 @@ void SexOnTheBeach() {
 } 
 
 void CubaLibre() {
-  digitalWrite(19, HIGH);
-  digitalWrite(17, HIGH);
-  mlCalculator(50);
-  digitalWrite(17, LOW);
-  mlCalculator(150);
-  digitalWrite(19, LOW);
+  digitalWrite(19, HIGH); //Cola an
+  digitalWrite(17, HIGH); //Rum an
+  mlCalculator(40);
+  digitalWrite(17, LOW); //Rum aus
+  mlCalculator(170);
+  digitalWrite(19, LOW); //Cola aus
   Serial.println("Erfolgreich eingefüllt!");
 }
 
 void CranberryVodka() {
-  digitalWrite(23, HIGH);
-  digitalWrite(15, HIGH);
+  digitalWrite(23, HIGH); //Cranberry an
+  digitalWrite(15, HIGH); //Vodka an
   mlCalculator(40);
-  digitalWrite(15, LOW);
-  mlCalculator(80);
-  digitalWrite(23, LOW);
+  digitalWrite(15, LOW); //Vodka aus
+  mlCalculator(170);
+  digitalWrite(23, LOW); //Cranberry aus
   Serial.println("Erfolgreich eingefüllt!");
 }
 
 void Screwdriver() {
-  digitalWrite(21, HIGH);
-  digitalWrite(15, HIGH);
+  digitalWrite(21, HIGH); //Orange an
+  digitalWrite(15, HIGH); //Vodka an
   mlCalculator(50);
-  digitalWrite(15, LOW);
-  mlCalculator(200);
-  digitalWrite(21, LOW);
+  digitalWrite(15, LOW); //Vodka aus
+  mlCalculator(150);
+  digitalWrite(21, LOW); //Orange aus
   Serial.println("Erfolgreich eingefüllt!");
 }
 
 void BlueLady() {
-  digitalWrite(18, HIGH);
-  digitalWrite(16, HIGH);
+  digitalWrite(18, HIGH); //Curacao an
+  digitalWrite(16, HIGH); //Gin an
   mlCalculator(20);
-  digitalWrite(18, LOW);
+  digitalWrite(18, LOW); //Curacao aus
   mlCalculator(20);
-  digitalWrite(16, LOW);
+  digitalWrite(16, LOW); //Gin aus
   Serial.println("Erfolgreich eingefüllt!");
 }
 
@@ -172,18 +172,18 @@ void BlackThunder() {
   digitalWrite(18, HIGH); //Curacao
   digitalWrite(19, HIGH); //Cola
   mlCalculator(20);
-  digitalWrite(18, LOW);
+  digitalWrite(18, LOW); //Curacao
   mlCalculator(20);
-  digitalWrite(15, LOW);
+  digitalWrite(15, LOW); //Vodka
   mlCalculator(120);
-  digitalWrite(19, LOW); 
+  digitalWrite(19, LOW); //Cola
   Serial.println("Erfolgreich eingefüllt!");
 }
 
 void KickItIn() {
-  digitalWrite(15, HIGH);
-  digitalWrite(18, HIGH);
-  digitalWrite(23, HIGH);
+  digitalWrite(15, HIGH); //Vodka
+  digitalWrite(18, HIGH); //Curacao
+  digitalWrite(23, HIGH); //Cranberry
   mlCalculator(20);
   digitalWrite(15, LOW);
   digitalWrite(18, LOW);
@@ -192,21 +192,21 @@ void KickItIn() {
 }
 
 void AquaVelva() {
-  digitalWrite(15, HIGH);
-  digitalWrite(16, HIGH);
+  digitalWrite(15, HIGH); //Vodka
+  digitalWrite(16, HIGH); //Gin
   mlCalculator(40);
   digitalWrite(15, LOW);
   digitalWrite(16, LOW);
-  digitalWrite(18, HIGH);
+  digitalWrite(18, HIGH); //Curacao
   mlCalculator(25);
   digitalWrite(18, LOW);
   Serial.println("Erfolgreich eingefüllt!");
 }
 
 void SapphireMadras() {
-  digitalWrite(16, HIGH);
-  digitalWrite(21, HIGH);
-  digitalWrite(23, HIGH);
+  digitalWrite(16, HIGH); //Gin
+  digitalWrite(21, HIGH); //Orange
+  digitalWrite(23, HIGH); //Cranberry
   mlCalculator(50);
   digitalWrite(16, LOW);
   digitalWrite(21, LOW);
@@ -216,19 +216,19 @@ void SapphireMadras() {
 }
 
 void GreenWidow() {
-  digitalWrite(18, HIGH);
-  digitalWrite(21, HIGH);
+  digitalWrite(18, HIGH); //Curacao
+  digitalWrite(21, HIGH); //Orange
   mlCalculator(40);
   digitalWrite(18, LOW);
-  mlCalculator(210);
+  mlCalculator(170);
   digitalWrite(21, LOW);
   Serial.println("Erfolgreich eingefüllt!");
 }
 
 void GreenEyes() {
-  digitalWrite(15, HIGH);
-  digitalWrite(18, HIGH);
-  digitalWrite(21, HIGH);
+  digitalWrite(15, HIGH); //Vodka
+  digitalWrite(18, HIGH); //Curacao
+  digitalWrite(21, HIGH); //Orange
   mlCalculator(30);
   digitalWrite(15, LOW);
   digitalWrite(18, LOW);
@@ -238,20 +238,20 @@ void GreenEyes() {
 }
 
 void GreenDevil() {
-  digitalWrite(17, HIGH);
-  digitalWrite(21, HIGH);
+  digitalWrite(17, HIGH); //Rum
+  digitalWrite(21, HIGH); //Orange
   mlCalculator(20);
   digitalWrite(17, LOW);
   digitalWrite(21, LOW);
-  digitalWrite(18, HIGH);
+  digitalWrite(18, HIGH); //Curacao
   mlCalculator(10);
   digitalWrite(18, LOW);
   Serial.println("Erfolgreich eingefüllt!");
 }
 
 void GinJuice() {
-  digitalWrite(16, HIGH);
-  digitalWrite(21, HIGH);
+  digitalWrite(16, HIGH); //Gin
+  digitalWrite(21, HIGH); //Orange
   mlCalculator(50);
   digitalWrite(16, LOW);
   mlCalculator(150);
@@ -260,8 +260,8 @@ void GinJuice() {
 }
 
 void SoftPoison() {
-  digitalWrite(18, HIGH);
-  digitalWrite(21, HIGH);
+  digitalWrite(18, HIGH); //Curacao
+  digitalWrite(21, HIGH); //Orange
   mlCalculator(20);
   digitalWrite(18, LOW);
   mlCalculator(140);
