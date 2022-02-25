@@ -18,6 +18,15 @@ SoftwareSerial HMISerial(DEFAULT_RXPin, DEFAULT_TXPin);
 
 // Declaring the buttons
 // Typ     <name>        =  typ      (<page-Nr>, <objekt-id>, "<name>"          );
+NexButton b0             =  NexButton(   21,          2,      "pumpe1"          );
+NexButton b1             =  NexButton(   21,          3,      "pumpe2"          );
+NexButton b2             =  NexButton(   21,          4,      "pumpe3"          );
+NexButton b3             =  NexButton(   21,          5,      "pumpe4"          );
+NexButton b4             =  NexButton(   21,          6,      "pumpe5"          );
+NexButton b5             =  NexButton(   21,          7,      "pumpe6"          );
+NexButton b6             =  NexButton(   21,          8,      "pumpe7"          );
+NexButton b7             =  NexButton(   21,          9,      "pumpe8"          );
+
 NexButton m_longisland   =  NexButton(    4,          3,      "m_longisland"    );
 NexButton m_sotb         =  NexButton(    5,          2,      "m_sotb"          );
 NexButton m_cubalibre    =  NexButton(    6,          2,      "m_cubalibre"     );
@@ -58,6 +67,14 @@ NexTouch *nex_listen_list[] = {
   &m_greendevil,
   &m_ginjuice,
   &m_softpoison,
+  &b0,
+  &b1,
+  &b2,
+  &b3,
+  &b4,
+  &b5,
+  &b6,
+  &b7,
   NULL
 };
 
@@ -71,6 +88,38 @@ void display_run() {
 //************************************************
 //* here are the events when a button is pressed *
 //************************************************
+void b0PopCallback(void *ptr) {
+  Pump1();
+}
+
+void b1PopCallback(void *ptr) {
+  Pump2();
+}
+
+void b2PopCallback(void *ptr) {
+  Pump3();
+}
+
+void b3PopCallback(void *ptr) {
+  Pump4();
+}
+
+void b4PopCallback(void *ptr) {
+  Pump5();
+}
+
+void b5PopCallback(void *ptr) {
+  Pump6();
+}
+
+void b6PopCallback(void *ptr) {
+  Pump7();
+}
+
+void b7PopCallback(void *ptr) {
+  Pump8();
+}
+
 void m_longislandPopCallback(void *ptr) {
   page19.show();
   delay(500);
@@ -197,6 +246,16 @@ void m_softpoisonPopCallback(void *ptr) {
 void displayInit() {
   nexInit();
 
+  b0.attachPop(b0PopCallback);
+  b1.attachPop(b1PopCallback);
+  b2.attachPop(b2PopCallback);
+  b3.attachPop(b3PopCallback);
+  b4.attachPop(b4PopCallback);
+  b5.attachPop(b5PopCallback);
+  b6.attachPop(b6PopCallback);
+  b7.attachPop(b7PopCallback);
+  
+  
   m_longisland.attachPop(m_longislandPopCallback);
   m_sotb.attachPop(m_sotbPopCallback);
   m_cubalibre.attachPop(m_cubalibrePopCallback);

@@ -31,6 +31,60 @@ void pinInit() {
 }
 
 
+
+//************************************************
+//* Here are the Methods for the pump testing    *
+//************************************************
+
+void Pump1(){
+  digitalWrite(15, HIGH);
+  delay(10000);
+  digitalWrite(15, LOW);
+}
+
+void Pump2(){
+  digitalWrite(16, HIGH);
+  delay(10000);
+  digitalWrite(16, LOW);
+}
+
+void Pump3(){
+  digitalWrite(17, HIGH);
+  delay(10000);
+  digitalWrite(17, LOW);
+}
+
+void Pump4(){
+  digitalWrite(18, HIGH);
+  delay(10000);
+  digitalWrite(18, LOW);
+}
+
+void Pump5(){
+  digitalWrite(19, HIGH);
+  delay(10000);
+  digitalWrite(19, LOW);
+}
+
+void Pump6(){
+  digitalWrite(21, HIGH);
+  delay(10000);
+  digitalWrite(21, LOW);
+}
+
+void Pump7(){
+  digitalWrite(22, HIGH);
+  delay(10000);
+  digitalWrite(22, LOW);
+}
+
+void Pump8(){
+  digitalWrite(23, HIGH);
+  delay(10000);
+  digitalWrite(23, LOW);
+}
+
+
 //************************************************
 //* Here are the Methods for the beverages       *
 //************************************************
@@ -40,23 +94,6 @@ void mlCalculator(int ml) {
   double calcmlS = ml/constmlS * 1000;
   delay(calcmlS);
 }
-
-/*
-void PumpenTest() {
-  digitalWrite(19, HIGH);
-  delay(10000);
-  digitalWrite(19, LOW);
-}
-
-void Malibu() {
-  digitalWrite(19, HIGH);
-  digitalWrite(17, HIGH);
-  mlCalculator(40);
-  digitalWrite(17, LOW);
-  mlCalculator(180);
-  digitalWrite(19, LOW);
-}
-*/
 
 void LongIsland() {
   digitalWrite(16, HIGH); //Gin an
