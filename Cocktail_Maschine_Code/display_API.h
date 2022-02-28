@@ -1,7 +1,7 @@
 // API for the Display defenitions etc.
 // Author :
 // Date   : 17.02.2022
-// Version: 0.0.1
+// Version: 0.1.0
 
 
 // Including the Nextion-Library
@@ -89,41 +89,50 @@ void display_run() {
 //* here are the events when a button is pressed *
 //************************************************
 void b0PopCallback(void *ptr) {
-  Pump1();
+  //Pump1();
+  machePump1 = true;
 }
 
 void b1PopCallback(void *ptr) {
-  Pump2();
+  //Pump2();
+  machePump2 = true;
 }
 
 void b2PopCallback(void *ptr) {
-  Pump3();
+  //Pump3();
+  machePump3 = true;
 }
 
 void b3PopCallback(void *ptr) {
-  Pump4();
+  //Pump4();
+  machePump4 = true;
 }
 
 void b4PopCallback(void *ptr) {
-  Pump5();
+  //Pump5();
+  machePump5 = true;
 }
 
 void b5PopCallback(void *ptr) {
-  Pump6();
+  //Pump6();
+  machePump6 = true;
 }
 
 void b6PopCallback(void *ptr) {
-  Pump7();
+  //Pump7();
+  machePump7 = true;
 }
 
 void b7PopCallback(void *ptr) {
-  Pump8();
+  //Pump8();
+  machePump8 = true;
 }
 
 void m_longislandPopCallback(void *ptr) {
   page19.show();
   delay(500);
-  LongIsland();
+  //LongIsland();
+  macheLongIsland = true;
   delay(500);
   page1.show();
 }
@@ -131,7 +140,7 @@ void m_longislandPopCallback(void *ptr) {
 void m_sotbPopCallback(void *ptr) {
   page19.show();
   delay(500);
-  SexOnTheBeach();
+  //SexOnTheBeach();
   delay(500);
   page1.show(); 
 }
@@ -139,7 +148,8 @@ void m_sotbPopCallback(void *ptr) {
 void m_cubalibrePopCallback(void *ptr) {
   page19.show();
   delay(500);
-  CubaLibre();
+  //CubaLibre();
+  macheCubaLibre = true;
   delay(500);
   page1.show();  
 }
@@ -147,7 +157,8 @@ void m_cubalibrePopCallback(void *ptr) {
 void m_cranberryPopCallback(void *ptr) {
   page19.show();
   delay(500);
-  CranberryVodka();
+  //CranberryVodka();
+  macheCranberryVodka = true;
   delay(500);
   page1.show();  
 }
@@ -155,7 +166,8 @@ void m_cranberryPopCallback(void *ptr) {
 void m_screwdriverPopCallback(void *ptr) {
   page19.show();
   delay(500);
-  Screwdriver();
+  //Screwdriver();
+  macheScrewdriver = true;
   delay(500);
   page1.show();  
 }
@@ -163,7 +175,8 @@ void m_screwdriverPopCallback(void *ptr) {
 void m_blueladyPopCallback(void *ptr) {
   page19.show();
   delay(500);
-  BlueLady();
+  //BlueLady();
+  macheBlueLady = true;
   delay(500);
   page1.show(); 
 }
@@ -171,7 +184,8 @@ void m_blueladyPopCallback(void *ptr) {
 void m_blackthunderPopCallback(void *ptr) {
   page19.show();
   delay(500);
-  BlackThunder();
+  //BlackThunder();
+  macheBlackThunder = true;
   delay(500);
   page2.show();
 }
@@ -179,7 +193,8 @@ void m_blackthunderPopCallback(void *ptr) {
 void m_kickitinPopCallback(void *ptr) {
   page19.show();
   delay(500);
-  KickItIn();
+  //KickItIn();
+  macheKickItIn = true;
   delay(500);
   page2.show(); 
 }
@@ -187,7 +202,8 @@ void m_kickitinPopCallback(void *ptr) {
 void m_aquavelvaPopCallback(void *ptr) {
   page19.show();
   delay(500);
-  AquaVelva();
+  //AquaVelva();
+  macheAquaVelva = true;
   delay(500);
   page2.show();
 }
@@ -195,7 +211,8 @@ void m_aquavelvaPopCallback(void *ptr) {
 void m_sapphirePopCallback(void *ptr) {
   page19.show();
   delay(500);
-  SapphireMadras();
+  //SapphireMadras();
+  macheSapphireMadras = true;
   delay(500);
   page2.show();
 }
@@ -203,7 +220,8 @@ void m_sapphirePopCallback(void *ptr) {
 void m_greenwidowPopCallback(void *ptr) {
   page19.show();
   delay(500);
-  GreenWidow();
+  //GreenWidow();
+  macheGreenWidow = true;
   delay(500);
   page2.show();  
 }
@@ -211,7 +229,8 @@ void m_greenwidowPopCallback(void *ptr) {
 void m_greeneyesPopCallback(void *ptr) {
   page19.show();
   delay(500);
-  GreenEyes();
+  //GreenEyes();
+  macheGreenEyes = true;
   delay(500);
   page2.show();  
 }
@@ -219,7 +238,8 @@ void m_greeneyesPopCallback(void *ptr) {
 void m_greendevilPopCallback(void *ptr) {
   page19.show();
   delay(500);
-  GreenDevil();
+  //GreenDevil();
+  macheGreenDevil = true;
   delay(500);
   page3.show();
 }
@@ -227,7 +247,8 @@ void m_greendevilPopCallback(void *ptr) {
 void m_ginjuicePopCallback(void *ptr) {
   page19.show();
   delay(500);
-  GinJuice();
+  //GinJuice();
+  macheGinJuice = true;
   delay(500);
   page3.show();
 }
@@ -235,7 +256,8 @@ void m_ginjuicePopCallback(void *ptr) {
 void m_softpoisonPopCallback(void *ptr) {
   page19.show();
   delay(500);
-  SoftPoison();
+  //SoftPoison();
+  macheSoftPoison = true;
   delay(500);
   page3.show(); 
 }
