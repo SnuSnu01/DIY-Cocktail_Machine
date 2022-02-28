@@ -5,16 +5,16 @@
 
 
 /******************************************************************
- * Definition of the individual pins for the inputs of the relais *
- * // Still needs testing so leave it commented                   *
- * #define IN_1 15   // Vodka                                     *
- * #define IN_2 16   // Gin                                       *
- * #define IN_3 17   // Rum                                       *
- * #define IN_4 18   // Curacao                                   *
- * #define IN_5 19   // Coca-Cola                                 *
- * #define IN_6 21   // Orangejuice                               *
- * #define IN_7 22   // Peachjuice                                *
- * #define IN_8 23   // Cranberryjuice                            *
+   Definition of the individual pins for the inputs of the relais
+   // Still needs testing so leave it commented
+   #define IN_1 15   // Vodka
+   #define IN_2 16   // Gin
+   #define IN_3 17   // Rum
+   #define IN_4 18   // Curacao
+   #define IN_5 19   // Coca-Cola
+   #define IN_6 21   // Orangejuice
+   #define IN_7 22   // Peachjuice
+   #define IN_8 23   // Cranberryjuice
  ******************************************************************/
 
 #ifndef MAINAPI_H_INCLUDED
@@ -64,52 +64,68 @@ void pinInit() {
 //* Here are the Methods for the pump testing    *
 //************************************************
 
-void Pump1(){
+void Pump1() {
+  Serial.println("Pumpe 1 Startet!");
   digitalWrite(15, HIGH);
   delay(10000);
   digitalWrite(15, LOW);
+  Serial.println("Pumpe 1 Fertig!");
 }
 
-void Pump2(){
+void Pump2() {
+  Serial.println("Pumpe 2 Startet!");
   digitalWrite(16, HIGH);
   delay(10000);
   digitalWrite(16, LOW);
+  Serial.println("Pumpe 2 Fertig!");
 }
 
-void Pump3(){
+void Pump3() {
+  Serial.println("Pumpe 3 Startet!");
   digitalWrite(17, HIGH);
   delay(10000);
   digitalWrite(17, LOW);
+  Serial.println("Pumpe 3 Fertig!");
 }
 
-void Pump4(){
+void Pump4() {
+  Serial.println("Pumpe 4 Startet!");
   digitalWrite(18, HIGH);
   delay(10000);
   digitalWrite(18, LOW);
+  Serial.println("Pumpe 4 Fertig!");
 }
 
-void Pump5(){
+void Pump5() {
+  Serial.println("Pumpe 5 Startet!");
   digitalWrite(19, HIGH);
   delay(10000);
   digitalWrite(19, LOW);
+  Serial.println("Pumpe 5 Fertig!");
 }
 
-void Pump6(){
+void Pump6() {
+  Serial.println("Pumpe 6 Startet!");
   digitalWrite(21, HIGH);
   delay(10000);
   digitalWrite(21, LOW);
+  Serial.println("Pumpe 6 Fertig!");
 }
 
-void Pump7(){
+void Pump7() {
+  Serial.println("Pumpe 7 Startet!");
   digitalWrite(22, HIGH);
   delay(10000);
   digitalWrite(22, LOW);
+  Serial.println("Pumpe 7 Fertig!");
 }
 
-void Pump8(){
+void Pump8() {
+  Serial.println("Pumpe 8 Startet!");
   digitalWrite(23, HIGH);
   delay(10000);
   digitalWrite(23, LOW);
+  Serial.println("Pumpe 8 Fertig!");
 }
 
 
@@ -119,7 +135,7 @@ void Pump8(){
 
 void mlCalculator(int ml) {
   double constmlS = 100.0 / 60.0;
-  double calcmlS = ml/constmlS * 1000;
+  double calcmlS = ml / constmlS * 1000;
   delay(calcmlS);
 }
 
@@ -137,7 +153,7 @@ void LongIsland() {
   mlCalculator(10);
   digitalWrite(21, LOW); //Orange aus
   mlCalculator(200);
-  digitalWrite(19, LOW); //Cola aus 
+  digitalWrite(19, LOW); //Cola aus
   Serial.println("Erfolgreich eingefüllt!");
 }
 
@@ -153,7 +169,7 @@ void SexOnTheBeach() {
   mlCalculator(20);
   digitalWrite(22, LOW); //Peach off
   Serial.println("Erfolgreich eingefüllt!");
-} 
+}
 
 void CubaLibre() {
   digitalWrite(19, HIGH);
@@ -204,7 +220,7 @@ void BlackThunder() {
   mlCalculator(20);
   digitalWrite(15, LOW);
   mlCalculator(120);
-  digitalWrite(19, LOW); 
+  digitalWrite(19, LOW);
   Serial.println("Erfolgreich eingefüllt!");
 }
 
