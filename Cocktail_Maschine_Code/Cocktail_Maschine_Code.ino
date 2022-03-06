@@ -6,13 +6,13 @@
 
 // Including the display_API.h
 #include "display_API.h"
-
+#include "webserver_API.h"
 
 void setup() {
   pinInit();
   Serial.begin(115200);
   displayInit();
-
+  ap_server();
 }
 
 void loop() {
