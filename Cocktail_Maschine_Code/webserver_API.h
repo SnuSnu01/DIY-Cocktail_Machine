@@ -1,17 +1,17 @@
-// API with Methods for mixing our drinks
+// API für den WebServer und die externe Steuerung 
 // Author :
 // Date   : 17.02.2022
 // Version: 0.1.2
 
 
-//Hier Kommt der WebServer
+//Importierte Bibiotheken 
 #include "main_API.h"
 #include "WiFi.h"
 #include "ESPAsyncWebServer.h"
 #include "SPIFFS.h"
 
 
-// Replace with your network credentials
+// Netzwerk
 const char* ssid     = "ESP32";
 const char* passwort = "";
 
